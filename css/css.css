@@ -1,0 +1,102 @@
+
+.head
+{
+    height: 95px;
+    background: green;
+}
+.main
+{
+    height: 255px;
+    background: white;
+}
+p
+{
+    position: static;
+    top: 11px;
+}
+.three
+{
+    width: 155px;
+    height: 155px;
+    position: fixed;
+    right: 16px;
+    top: 155px;
+    background: green;
+    z-index: 2;
+}
+.two
+{
+    position: absolute;
+    width: 196px;
+    height: 55px;
+    top: 15px;
+    left: 55px;
+    color: gold;
+}
+.one
+{
+    position: relative;
+    width: 199px;
+    height: 115px;
+    top: 25px;
+    left: 25px;
+    background: red;
+    color: white;
+}
+h1
+{
+    margin-bottom: 25px;
+}
+
+
+
+/* 
+轮播图demo
+*/
+.banner-container{
+    width:1200px;
+    height:400px;
+    margin:0px auto;
+    position:relative;
+    overflow: hidden;/*用于隐藏超出展示容器的内容部分*/
+}
+.banner-image-container{
+    width:6000px;
+    height:400px;
+    margin:0px auto;
+    animation:text 30s infinite  linear;
+    font-size:0px;/*消除图片间隔*/
+    
+}
+.banner-image-container img{
+    width:1200px;
+    height:400px;
+    float:left;
+}
+
+/* 轮播图关键帧 */
+ /*0%-20%是播放下一个图片，0%-10%是图片暂停的时间*/
+    0%,10%{
+        /* margin-left:0px; */
+        transform: translateX(0px);
+    }
+    20%,30%{
+        /* margin-left:-1200px; */
+        transform: translateX(-1200px);
+    }
+    40%,50%{
+        /* margin-left:-2400px; */
+        transform: translateX(-2400px);
+    }
+    60%,70%{
+        /* margin-left:-3600px; */
+        transform: translateX(-3600px);
+    }
+    80%,90%{
+        /* margin-left:-4800px; */
+        transform: translateX(-4800px);
+    }
+    100%,110%{
+        /* margin-left: 0px; */
+        transform: translateX(0px);
+    }
